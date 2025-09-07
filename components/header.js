@@ -35,13 +35,33 @@ export function Header() {
   const ventana = el.querySelector(".header__ventana");
   const btnCerrar = el.querySelector(".header__cerrar-ventana");
 
-  btnAbrir.addEventListener("click", () => {
-    ventana.style.display = "inherit";
-  });
+  function openMenu() {
+    ventana.hidden = false;
+    ventana.classList.add("is-open");
+    document.documentElement.classList.add("nav-open");
+  }
 
-  btnCerrar.addEventListener("click", () => {
-    ventana.style.display = "";
-  });
+  function closeMenu() {
+    ventana.classList.remove("is-open");
+    ventana.hidden = true;
+    document.documentElement.classList.remove("nav-open");
+  }
+
+  btnAbrir.addEventListener("click", openMenu);
+  btnCerrar.addEventListener("click", closeMenu);
+
+  ventana.addEventListener(
+    "click",
+    (e) => e.target.closest("a[href]") && closeMenu()
+  );
+
+  // btnAbrir.addEventListener("click", () => {
+  //   ventana.style.display = "inherit";
+  // });
+
+  // btnCerrar.addEventListener("click", () => {
+  //   ventana.style.display = "";
+  // });
 
   return el;
 }

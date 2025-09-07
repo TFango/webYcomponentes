@@ -18,12 +18,21 @@
 }
 
 .header__ventana {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background-color: rgba(0, 0, 0, 1);
   display: none;
   justify-content: center;
   align-items: center;
+}
+
+.header__ventana.is-open {
+  display: flex;
+}
+
+html.nav-open,
+body.nav-open {
+  overflow: hidden;
 }
 
 .header__deskop {
