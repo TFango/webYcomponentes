@@ -22,9 +22,9 @@ export function Header() {
           <button class="header__cerrar-ventana"></button>
           <nav class="header__nav">
             <ul class="header__list">
-              <li><a href="">Portfolio</a></li>
-              <li><a href="">Servicios</a></li>
-              <li><a href="">Contacto</a></li>
+              <li><a href="./portfolio.html">Portfolio</a></li>
+              <li><a href="./servicios.html">Servicios</a></li>
+              <li><a href="./contacto.html">Contacto</a></li>
             </ul>
           </nav>
         </div>
@@ -42,7 +42,6 @@ export function Header() {
   btnCerrar.addEventListener("click", () => {
     ventana.style.display = "";
   });
-
 
   return el;
 }
