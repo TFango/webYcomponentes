@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi sitio web</title>
+    <script type="module" src="./pages/index.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./components/header.css" />
+    <link rel="stylesheet" href="./components/form.css" />
+    <link rel="stylesheet" href="./components/footer.css" />
+    <link rel="stylesheet" href="./pages/index.css" />
+  </head>
+  <body>
+    <div id="mount-header"></div>
+
+    <main class="main">
+      <section class="hero">
+        <div class="hero__contenedor">
+          <h1 class="hero__titulo">
+            <span class="hero__word">Hola</span>
+            <span class="hero__word hero__word--accent">Soy</span>
+            <span
+              class="hero__word hero__word--accent"
+              data-cms="hero.nombre"
+            ></span>
+          </h1>
+          <div class="hero__cohete">
+            <img src="./assets/img/rocket.svg" alt="" class="hero__imagen" />
+            <img src="./assets/img/sombra.svg" alt="" class="hero__sombra" />
+          </div>
+        </div>
+      </section>
+
+      <section class="sobre-mi">
+        <div class="sobre-mi__contenedor">
+          <div class="sobre-mi__texto">
+            <h2 class="sobre-mi__titulo" data-cms="presentacion.titulo"></h2>
+            <p
+              class="sobre-mi__descripcion"
+              data-cms="presentacion.descripcion"
+            ></p>
+          </div>
+          <img data-cms-img="presentacion.foto" alt="" class="sobre-mi__img" />
+        </div>
+      </section>
+
+      <section class="servicios">
+        <div class="servicios__contenedor">
+          <h1 class="servicios__title">
+            Mis
+            <span class="servicios__title servicios__title-accent"
+              >servicios</span
+            >
+          </h1>
+
+          <div class="servicios__grid" id="servicios-grid">
+            <article class="card">
+              <img
+                class="card__img"
+                src="./assets/img/1erServicio.png"
+                alt=""
+              />
+              <h2 class="card__title">Desarrollo de paginas web</h2>
+              <p class="card__desc">
+                Creo sitios modernos, rápidos y responsivos, adaptados a las
+                necesidades de cada proyecto. Desde páginas institucionales
+                hasta e-commerce funcionales, con diseño atractivo y
+                mantenimiento sencillo.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__imgs-webs">
+                <img
+                  class="webs"
+                  src="./assets/img/2doservicio2do.png"
+                  alt=""
+                />
+                <img class="webs" src="./assets/img/2doservicio.png" alt="" />
+              </div>
+              <h2 class="card__title">Animaciones para webs</h2>
+              <p class="card__desc">
+                Doy vida a tu sitio con transiciones fluidas y efectos
+                interactivos que mejoran la experiencia del usuario, hacen tu
+                marca más memorable y mantienen la navegación dinámica y
+                atractiva.
+              </p>
+            </article>
+
+            <article class="card">
+              <div class="card__imgs-phones">
+                <img class="phone" src="./assets/img/3erPhone.svg" alt="" />
+                <img class="phone" src="./assets/img/2doPhone.svg" alt="" />
+                <img class="phone" src="./assets/img/1erPhone.svg" alt="" />
+              </div>
+              <h2 class="card__title">Desarrollo de apps</h2>
+              <p class="card__desc">
+                Diseño y construyo aplicaciones modernas, rápidas y escalables,
+                enfocadas en brindar soluciones prácticas y una experiencia de
+                usuario intuitiva en cualquier dispositivo.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <div id="mount-form"></div>
+
+      <div id="mount-footer"></div>
+    </main>
+  </body>
+</html>

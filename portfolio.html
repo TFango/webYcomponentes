@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+
+    <script type="module" src="./pages/portfolio.js"></script>
+
+    <link rel="stylesheet" href="./assets/css/global.css" />
+    <link rel="stylesheet" href="./components/header.css" />
+    <link rel="stylesheet" href="./components/form.css" />
+    <link rel="stylesheet" href="./components/footer.css" />
+    <link rel="stylesheet" href="./pages/portfolio.css" />
+  </head>
+  <body>
+    <div id="mount-header"></div>
+
+    <main>
+      <section class="hero">
+        <div class="hero__content">
+          <h1 class="hero__title">
+            Mis
+            <span class="hero__title hero__title-accent">trabajos</span>
+          </h1>
+          <div class="hero__imgs">
+            <img class="hero__img" src="/assets/img/trabajo.png" />
+            <img
+              data-cms-img="hero.sombra"
+              src="./assets/img/sombra.svg"
+              alt=""
+              class="hero__sombra"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section class="work">
+        <div class="work__grid" id="work-grid"></div>
+      </section>
+    </main>
+
+    <div id="mount-footer"></div>
+
+    <template id="work-card-template">
+      <article class="card">
+        <img class="card__img" alt="" />
+        <h2 class="card__title"></h2>
+        <p class="card__desc"></p>
+      </article>
+    </template>
+  </body>
+</html>
